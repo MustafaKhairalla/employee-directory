@@ -1,0 +1,44 @@
+[
+    {
+        "id": "0",
+        "name": "david",
+        "last-name": "fin",
+        "age": "24",
+        "hobby": "Dancing"
+    },
+    {
+        "id": "1",
+        "first-name": "tim",
+        "last-name": "shur",
+        "age": "22",
+        "hobby": "Singing"
+    },
+    {
+        "id": "2",
+        "first-name": "amber",
+        "last-name": "shur",
+        "age": "24",
+        "hobby": "Reading"
+    },
+    {
+        "id": "3",
+        "first-name": "caleb",
+        "last-name": "taylor",
+        "age": "24",
+        " hobby": "Football"
+    },
+    {
+        "id": 4,
+        "first-name": "john",
+        "last-name": "mac",
+        "age": "20",
+        "hobby": "Archery"
+    },
+    {
+        "id": "5",
+        "first-name": "nancy",
+        "last-name": "agram",
+        "age": "32",
+        "hobby": "singing"
+    }
+]
