@@ -1,43 +1,43 @@
 [
     {
         "id": "0",
-        "name": "david",
-        "last-name": "fin",
+        "firstname": "david",
+        "lastname": "fin",
         "age": "24",
         "hobby": "Dancing"
     },
     {
         "id": "1",
-        "first-name": "tim",
-        "last-name": "shur",
+        "firstname": "tim",
+        "lastname": "shur",
         "age": "22",
         "hobby": "Singing"
     },
     {
         "id": "2",
-        "first-name": "amber",
-        "last-name": "shur",
+        "firstname": "amber",
+        "lastname": "shur",
         "age": "24",
         "hobby": "Reading"
     },
     {
         "id": "3",
-        "first-name": "caleb",
-        "last-name": "taylor",
+        "firstname": "caleb",
+        "lastname": "taylor",
         "age": "24",
-        " hobby": "Football"
+        "hobby": "Football"
     },
     {
         "id": 4,
-        "first-name": "john",
-        "last-name": "mac",
+        "firstname": "john",
+        "lastname": "mac",
         "age": "20",
         "hobby": "Archery"
     },
     {
         "id": "5",
-        "first-name": "nancy",
-        "last-name": "agram",
+        "firstname": "nancy",
+        "lastname": "agram",
         "age": "32",
         "hobby": "singing"
     }

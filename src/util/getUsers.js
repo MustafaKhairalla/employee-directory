@@ -1,14 +1,11 @@
 import React from "react";
 import Data from "../users.json";
 
-export default {
-    getUsers: function () {
-        Data.map((users, index) => {
-            return (users);
-        })
-    },
+// export default {
+//     getUsers: function () {
+//         return JSON.parse(Data);
+//     }
 
-    getUserByName: function (props) {
-        return Data.filter(props.name)
-    }
-}
+//     
+// }
+

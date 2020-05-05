@@ -8,8 +8,19 @@ function Users() {
         loadusers();
     }, []);
 
-    function loadusers() {
+    function loadusers(key) {
+        switch (key) {
+            case key === "all":
+                getUsers();
+                break;
 
+            case key === "name":
+                getUserByName();
+                break;
+
+            default:
+                console.log("error")
+        }
     }
 
     return ();
