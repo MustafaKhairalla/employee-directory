@@ -15,7 +15,8 @@ class Search extends Component {
     };
 
     getUserByName(props) {
-        return Data.filter(props.search)
+        cosnt { results } = this.staet
+        return Data.filter(results => e
     }
 
     // When the component mounts, get a list of all available base breeds and update this.state.breeds
@@ -44,7 +45,7 @@ class Search extends Component {
         return (
             <div>
 
-                <h1 className="text-center">Search By Breed!</h1>
+                <h1 className="text-center">Search By Name</h1>
 
                 <SearchForm
                     handleFormSubmit={this.handleFormSubmit}
