@@ -7,41 +7,49 @@ class Search extends Component {
     state = {
         search: "",
         results: [],
+        filterData: [],
+        searchText: '',
         error: ""
     };
 
     getUsers() {
-        return JSON.parse(Data);
+        //return JSON.parse(Data);
+
+
+        return Data
     };
 
-    getUserByName(props) {
-        cosnt { results } = this.staet
-        return Data.filter(results => e
+    getUserByName(value) {
+
+        const { results } = this.state;
+
+        // 1 people
+        return results.filter(result => result.firstname.includes(value))
     }
 
     // When the component mounts, get a list of all available base breeds and update this.state.breeds
     componentDidMount() {
-        this.getUsers()
-            .then(res => this.setState({ results: res }))
-            .catch(err => console.log(err));
+        const users = this.getUsers()
+        this.setState({ results: users })
     }
 
     handleInputChange = event => {
-        this.setState({ search: event.target.value });
+        this.setState({ searchText: event.target.value });
+
     };
 
     handleFormSubmit = event => {
         event.preventDefault();
-        this.getUserByName(this.state.search)
-            .then(res => {
-                if (res.data.status === "error") {
-                    throw new Error(res.data.message);
-                }
-                this.setState({ results: res.data.message, error: "" });
-            })
-            .catch(err => this.setState({ error: err.message }));
+        const { searchText } = this.state
+        const filterData = this.getUserByName(searchText);
+
+        this.setState({ filterData: filterData, search: searchText });
+
     };
     render() {
+
+        const { search, results, filterData } = this.state;
+        console.log({ search, results, filterData, lenght: search.length })
         return (
             <div>
 
@@ -50,11 +58,14 @@ class Search extends Component {
                 <SearchForm
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
-                    results={this.state.results}
+                    results={results}
                 />
-                <SearchResults results={this.state.results} />
+                {
+                    search.length > 0 ? <SearchResults results={filterData} />
+                        : <SearchResults results={results} />
+                }
 
-            </div>
+            </div >
         );
     }
 }
